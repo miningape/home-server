@@ -38,5 +38,10 @@ Caddy:
 - https://github.com/serfriz/caddy-custom-builds
 - https://github.com/serfriz/caddy-custom-builds/tree/main/caddy-porkbun-dockerproxy (Docker proxy for porkbun) 
 
+Portainer:
+- Container manager / viewer
+- Requires valid SSL certificate (so is reverse proxied by Caddy similarly to Vaultwarden)
+- https://docs.portainer.io/
+
 On Startup: (startup.sh)
 - Disable wifi power saving mode -> https://forums.raspberrypi.com/viewtopic.php?t=339699
