@@ -1,4 +1,4 @@
-*.hermetic.dev {
+*.{$DOMAIN} {
   tls {
     dns porkbun {
       api_key {$PORKBUN_API_KEY}
@@ -6,12 +6,12 @@
     }
   }
 
-  @vaultwarden host vault.hermetic.dev
+  @vaultwarden host {$VAULTWARDEN_SUBDOMAIN}.{$DOMAIN}
   handle @vaultwarden {
     reverse_proxy vaultwarden:80
   }
 
-  @portainer host portainer.hermetic.dev 
+  @portainer host {$PORTAINER_SUBDOMAIN}.{$DOMAIN} 
   handle @portainer {
     reverse_proxy https://portainer:9443 {
       transport http { 

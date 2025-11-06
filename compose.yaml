@@ -38,7 +38,7 @@ services:
     volumes:
       - './data/data-vaultwarden:/data/'
     environment:
-      DOMAIN: ${DOMAIN}
+      DOMAIN: https://${VAULTWARDEN_SUBDOMAIN}.${DOMAIN}
       SIGNUPS_ALLOWED: true
     restart: unless-stopped
 
@@ -57,6 +57,10 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock # Proxy the docker socket so it has access to networking
     environment:
       CADDY_DOCKER_CADDYFILE_PATH: /etc/caddy/Caddyfile
+
       DOMAIN: ${DOMAIN}
+      VAULTWARDEN_SUBDOMAIN: ${VAULTWARDEN_SUBDOMAIN}
+      PORTAINER_SUBDOMAIN: ${PORTAINER_SUBDOMAIN}
+
       PORKBUN_API_KEY: ${PORKBUN_API_KEY}
       PORKBUN_API_SECRET_KEY: ${PORKBUN_API_SECRET_KEY}
