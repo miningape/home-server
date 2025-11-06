@@ -24,6 +24,14 @@ services:
       - SYS_NICE # Optional, if Pi-hole should get some more processing time
     restart: unless-stopped
 
+  portainer:
+    container_name: portainer
+    image: portainer/portainer-ce:lts
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./data/data-portainer:/data
+
   vaultwarden:
     container_name: vaultwarden
     image: vaultwarden/server:latest-alpine
