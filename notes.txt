@@ -1,0 +1,28 @@
+First time setup:
+- Install:
+  - Docker (docker compose)
+  - Tailscale
+  - SSH (usually comes with OS)
+
+Tailscale:
+- Always use auth key
+- Disable auth key expiry
+- Set as exit node
+- Enable local network access (as exit node)
+- Setup subnet router pointing towards raspberry pi
+- Set tailscale DNS to point to raspberrypi (& override default)
+
+Pi-Hole:
+- Set DHCP rule to give pi-hole machine's MAC address a fixed local IP
+- Set router lan settings (proxy DNS / static DNS point to pihole)
+- Set broadband (static DNS point to pihole) -> https://www.reddit.com/r/pihole/comments/q9ngmw/psa_to_anyone_with_centurylink_a_zyxel_modem/
+- Admin portal runs on :3000
+- Flush DNS cache -> https://www.freecodecamp.org/news/how-to-flush-dns-on-mac-macos-clear-dns-cache/#version
+- Create DNS domain entry pointing to raspberrypi - should be seen on wifi, on tailscale & on tailscale w/ exit node
+
+VaultWarden:
+- Password manager
+- Caddy (reverse proxy) so we can point to https://vault.hermetic.dev with a valid SSL cert
+
+On Startup: (startup.sh)
+- Disable wifi power saving mode -> https://forums.raspberrypi.com/viewtopic.php?t=339699

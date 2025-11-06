@@ -1,0 +1,14 @@
+- Password manager (vault warden)
+- Setup home page / dashboard
+- Set up cloud storage 
+- Set up prometheus + grafana
+- Podman (?)
+- Light(-er-)weight OS
+
+- Wikipedia proxy / replica
+- Self host git repository
+  - replicate github account
+- Host containers
+
+- Add extra storage
+- Add UPS / battery
