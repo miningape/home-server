@@ -1,4 +1,4 @@
-- Password manager (vault warden)
+- ~~Password manager (vault warden)~~
 - Setup home page / dashboard
 - Set up cloud storage 
 - Set up prometheus + grafana

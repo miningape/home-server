@@ -13,6 +13,7 @@ Tailscale:
 - Set tailscale DNS to point to raspberrypi (& override default)
 
 Pi-Hole:
+- DNS Server (DNS sinkhole / adblocker)
 - Set DHCP rule to give pi-hole machine's MAC address a fixed local IP
 - Set router lan settings (proxy DNS / static DNS point to pihole)
 - Set broadband (static DNS point to pihole) -> https://www.reddit.com/r/pihole/comments/q9ngmw/psa_to_anyone_with_centurylink_a_zyxel_modem/
@@ -22,7 +23,20 @@ Pi-Hole:
 
 VaultWarden:
 - Password manager
-- Caddy (reverse proxy) so we can point to https://vault.hermetic.dev with a valid SSL cert
+- Requires Caddy (reverse proxy) so we can point to https://vault.hermetic.dev with a valid SSL cert
+- Requires valid SSL cert, and if we want to connect to bitwarden apps it needs to be validated by a trusted CA
+- Requires valid domain to be owned
+- https://github.com/dani-garcia/vaultwarden/wiki/Using-Docker-Compose
+
+Caddy:
+- Reverse proxy
+- Requires DNS mapping (CNAME) pointing domain/subdomain to raspberry pi (PiHole), this lets Caddy route the request to the correct docker container based on the domain
+- Uses Let's Encrypt to sign certs (Caddy performs DNS challenge)
+- https://github.com/dani-garcia/vaultwarden/wiki/Running-a-private-vaultwarden-instance-with-Let%27s-Encrypt-certs
+- Connects to Porkbun (DNS provider) to modify TXT records on domain for ACME challenge
+- https://github.com/caddy-dns/porkbun
+- https://github.com/serfriz/caddy-custom-builds
+- https://github.com/serfriz/caddy-custom-builds/tree/main/caddy-porkbun-dockerproxy (Docker proxy for porkbun) 
 
 On Startup: (startup.sh)
 - Disable wifi power saving mode -> https://forums.raspberrypi.com/viewtopic.php?t=339699
