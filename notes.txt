@@ -20,6 +20,8 @@ Pi-Hole:
 - Admin portal runs on :3000
 - Flush DNS cache -> https://www.freecodecamp.org/news/how-to-flush-dns-on-mac-macos-clear-dns-cache/#version
 - Create DNS domain entry pointing to raspberrypi - should be seen on wifi, on tailscale & on tailscale w/ exit node
+- Blocklist generators:
+  - https://sefinek.net/blocklist-generator/pihole
 
 VaultWarden:
 - Password manager
@@ -31,6 +33,7 @@ VaultWarden:
 Caddy:
 - Reverse proxy
 - Requires DNS mapping (CNAME) pointing domain/subdomain to raspberry pi (PiHole), this lets Caddy route the request to the correct docker container based on the domain
+- We keep ports 80 (HTTP) and 443 (HTTPS) bound to this container, since it can route to any other containers
 - Uses Let's Encrypt to sign certs (Caddy performs DNS challenge)
 - https://github.com/dani-garcia/vaultwarden/wiki/Running-a-private-vaultwarden-instance-with-Let%27s-Encrypt-certs
 - Connects to Porkbun (DNS provider) to modify TXT records on domain for ACME challenge
@@ -42,6 +45,11 @@ Portainer:
 - Container manager / viewer
 - Requires valid SSL certificate (so is reverse proxied by Caddy similarly to Vaultwarden)
 - https://docs.portainer.io/
+
+Gitea:
+- Git / DevOps platform
+- https://about.gitea.com/
+- mirror github: https://github.com/RayLabsHQ/gitea-mirror
 
 On Startup: (startup.sh)
 - Disable wifi power saving mode -> https://forums.raspberrypi.com/viewtopic.php?t=339699
