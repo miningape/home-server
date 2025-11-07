@@ -1,5 +1,6 @@
 - ~~Password manager (vault warden)~~
 - Setup home page / dashboard
+- Docker server scaler (sleep when unused) - Sablier https://github.com/sablierapp/sablier?tab=readme-ov-file
 - Set up cloud storage 
 - Set up prometheus + grafana
 - Podman (?)

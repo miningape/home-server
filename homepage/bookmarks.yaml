@@ -1,0 +1,34 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/bookmarks
+
+- Entertainment:
+  - YouTube:
+    - icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/youtube.svg
+      abbr: YT
+      href: https://youtube.com/
+  - HackerNews:
+    - icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/hacker-news.svg
+      href: https://news.ycombinator.com
+          
+- Social:
+  - Facebook:
+    - icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/facebook.svg
+      href: https://facebook.com
+  - Instagram:
+    - icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/instagram.svg
+      href: https://instagram.com
+  - LinkedIn:
+    - icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/linkedin.svg
+      href: https://linkedin.com
+  - Gmail:
+    - icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/gmail.svg
+      href: https://gmail.com
+  - Reddit:
+    - icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/reddit.svg
+      href: https://reddit.com/
+
+- Developer:
+  - Github:
+    - icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/github-light.svg
+      href: https://github.com/

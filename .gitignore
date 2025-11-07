@@ -1,2 +1,9 @@
 data/**
 .env
+
+homepage/**
+!homepage/bookmarks.yaml
+!homepage/docker.yaml
+!homepage/services.yaml
+!homepage/settings.yaml
+!homepage/widgets.yaml

@@ -51,5 +51,8 @@ Gitea:
 - https://about.gitea.com/
 - mirror github: https://github.com/RayLabsHQ/gitea-mirror
 
+Icons:
+- https://dashboardicons.com/
+
 On Startup: (startup.sh)
 - Disable wifi power saving mode -> https://forums.raspberrypi.com/viewtopic.php?t=339699

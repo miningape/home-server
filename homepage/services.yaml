@@ -1,0 +1,37 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/services/
+
+- Management:
+    - Pi-Hole:
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/pi-hole.svg
+        href: http://rpi.rpi:3000/admin
+        description: DNS Server & Sinkhole
+        container: pihole
+        server: my-docker
+        widget:
+            type: pihole
+            url: http://rpi.rpi:3000
+            version: 6
+            key: {{HOMEPAGE_VAR_PI_HOLE_PASSWORD}}
+    
+    - Portainer:
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/portainer-dark.svg
+        href: https://portainer.hermetic.dev
+        description: Container Management
+        container: portainer
+        server: my-docker
+        widget:
+            type: portainer
+            url: https://portainer.hermetic.dev
+            env: 3
+            key: {{HOMEPAGE_VAR_PORTAINER_API_KEY}}
+
+- Services:
+    - Vaultwarden:
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/bitwarden.svg
+        href: https://vault.hermetic.dev
+        description: Password Manager (Bitwarden)
+        container: vaultwarden 
+        server: my-docker
+        siteMonitor: https://vault.hermetic.dev/api/alive # https://github.com/dani-garcia/vaultwarden/discussions/5117

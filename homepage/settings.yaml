@@ -1,0 +1,19 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/settings/
+
+providers:
+  openweathermap: openweathermapapikey
+  weatherapi: weatherapiapikey
+
+title: Home
+description: Homepage for the LAN
+
+headerStyle: clean
+
+# fullWidth: true
+
+# layout:
+#   Management:
+#     style: column
+#     columns: 3

@@ -1,0 +1,30 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/info-widgets/
+
+- resources:
+    cpu: true
+    cputemp: true
+    tempmin: 0
+    tempmax: 100
+    memory: true
+    disk: /
+
+- search:
+    provider: duckduckgo
+    target: _blank
+
+- datetime:
+    text_size: xl
+    format:
+      timeStyle: short
+
+- openmeteo:
+    label: Copenhagen # optional
+    latitude: 55.638270 
+    longitude: 12.582153
+    timezone: Europe/Copenhagen # optional
+    units: metric # or imperial
+    cache: 30 # Time in minutes to cache API responses, to stay within limits
+    format: # optional, Intl.NumberFormat options
+      maximumFractionDigits: 1

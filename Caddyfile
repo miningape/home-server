@@ -25,3 +25,9 @@
     abort
   }
 }
+
+http://{$HOMEPAGE_DOMAIN} {
+  handle {
+    reverse_proxy homepage:3000
+  }
+}
