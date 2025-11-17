@@ -23,6 +23,15 @@ services:
       - SYS_TIME # Required if you are using Pi-hole as your NTP client to be able to set the host's system time
       - SYS_NICE # Optional, if Pi-hole should get some more processing time
     restart: unless-stopped
+    deploy:
+      mode: replicated
+      replicas: 1
+      resources:
+        reservations:
+          cpus: "0.2"
+      update_config:
+        order: start-first
+
 
   portainer:
     container_name: portainer
