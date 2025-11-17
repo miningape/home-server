@@ -5,6 +5,8 @@
 - Set up prometheus + grafana
 - Podman (?)
 - Light(-er-)weight OS
+- Setup headscale (self hosted tailscale control server) https://headscale.net/stable/
+- Cloud exit node https://www.reddit.com/r/Tailscale/comments/vwpauf/cheapest_way_to_run_an_exit_node/
 
 - Wikipedia proxy / replica
 - Self host git repository
