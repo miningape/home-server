@@ -32,7 +32,6 @@ services:
       update_config:
         order: start-first
 
-
   portainer:
     container_name: portainer
     image: portainer/portainer-ce:lts
